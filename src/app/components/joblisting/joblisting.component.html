@@ -1,14 +1,29 @@
-<div class="joblisting">
-  <img src="{{ job.logo }}" />
-  <div class="joblisting__header">
-    <div class="joblisting__company">{{ job.company }}</div>
-    <div class="joblisting__pill new" *ngIf="job.new">NEW!</div>
-    <div class="joblisting__pill featured" *ngIf="job.featured">FEATURED!</div>
+
+<div class="joblisting-wrapper">
+    <img src="{{ job.logo }}" />
+</div>
+<div class="joblisting-main">
+  <div class="joblisting-main__header">
+    <div class="joblisting-main__company">{{ job.company }}</div>
+    <div class="joblisting-main__pill new" *ngIf="job.new">NEW!</div>
+    <div class="joblisting-main__pill featured" *ngIf="job.featured">FEATURED!</div>
   </div>
-  <div class="joblisting__role">{{ job.role }}</div>
-  <div class="joblisting__details-container">
+  <div class="joblisting-main__role">{{ job.position }}</div>
+  <div class="joblisting-main__details-container">
     <div>{{ job.postedAt }}</div>
+    <div class="oval"></div>
     <div>{{ job.contract }}</div>
+    <div class="oval"></div>
     <div>{{ job.location }}</div>
+  </div>
+  <div class="joblisting-main__tags-container">
+    <div>{{ job.role }}</div>
+    <div>{{ job.level }}</div>
+    <div *ngFor="let language of job.languages">
+      <div>{{ language }}</div>
+    </div>
+    <div *ngFor="let tool of job.tools">
+      <div>{{ tool }}</div>
+    </div>
   </div>
 </div>
