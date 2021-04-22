@@ -1,1 +1,14 @@
-<p>joblisting works!</p>
+<div class="joblisting">
+  <img src="{{ job.logo }}" />
+  <div class="joblisting__header">
+    <div class="joblisting__company">{{ job.company }}</div>
+    <div class="joblisting__pill new" *ngIf="job.new">NEW!</div>
+    <div class="joblisting__pill featured" *ngIf="job.featured">FEATURED!</div>
+  </div>
+  <div class="joblisting__role">{{ job.role }}</div>
+  <div class="joblisting__details-container">
+    <div>{{ job.postedAt }}</div>
+    <div>{{ job.contract }}</div>
+    <div>{{ job.location }}</div>
+  </div>
+</div>

@@ -1,1 +1,6 @@
-<p>home-screen works!</p>
+<div>
+  <app-header></app-header>
+
+  <app-joblisting *ngFor="let job of jobs" [job]="job"> </app-joblisting>
+  <app-filtercomponent></app-filtercomponent>
+</div>
