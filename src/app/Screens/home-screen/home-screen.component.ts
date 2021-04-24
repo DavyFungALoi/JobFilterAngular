@@ -17,7 +17,10 @@ export class HomeScreenComponent implements OnInit {
       this.filterArray.push(jobDetails);
       console.log('added value');
     }
-    console.log(this.filterArray)
+    console.log(this.filterArray);
+  }
+  resetArray() {
+    this.filterArray = [];
   }
 
   ngOnInit(): void {
@@ -27,5 +30,5 @@ export class HomeScreenComponent implements OnInit {
 }
 
 /*
-  *ngFor="let filter of filterArray"
-*/
+ *ngFor="let filter of filterArray"
+ */

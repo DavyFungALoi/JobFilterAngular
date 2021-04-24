@@ -7,7 +7,7 @@
         [filter]="filter"
       ></app-filtercomponent>
     </div>
-    <div class="filter-container__clear">Clear</div>
+    <div class="filter-container__clear" (click)="resetArray()">Clear</div>
   </div>
   <app-joblisting
     *ngFor="let job of jobs"
