@@ -18,13 +18,13 @@
     <div>{{ job.location }}</div>
   </div>
   <div class="joblisting-main__tags-container">
-    <div class="joblisting-main__tag" (click)="OnFilter(job.role)">{{ job.role }}</div>
-    <div class="joblisting-main__tag"  (click)="OnFilter(job.level)">{{ job.level }}</div>
+    <div class="tag" (click)="OnFilter(job.role)">{{ job.role }}</div>
+    <div class="tag" (click)="OnFilter(job.level)">{{ job.level }}</div>
     <div *ngFor="let language of job.languages">
-      <div class="joblisting-main__tag"  (click)="OnFilter(language)">{{ language }}</div>
+      <div class="tag" (click)="OnFilter(language)">{{ language }}</div>
     </div>
     <div *ngFor="let tool of job.tools">
-      <div class="joblisting-main__tag"  (click)="OnFilter(tool)">{{ tool }}</div>
+      <div class="tag" (click)="OnFilter(tool)">{{ tool }}</div>
     </div>
   </div>
 </div>

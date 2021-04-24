@@ -13,8 +13,7 @@ export class JoblistingComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
   OnFilter(jobDetails: string) {
     this.jobDetails.emit(jobDetails);
   }

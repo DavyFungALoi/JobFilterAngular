@@ -25,3 +25,7 @@ export class HomeScreenComponent implements OnInit {
     this.filterArray = [];
   }
 }
+
+/*
+  *ngFor="let filter of filterArray"
+*/

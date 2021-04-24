@@ -1,6 +1,14 @@
 <div>
-  <app-header></app-header>
-  <app-filtercomponent></app-filtercomponent>
+  <app-header> </app-header>
+  <div class="filter-container">
+    <div class="filter-container__tags-container">
+      <app-filtercomponent
+        *ngFor="let filter of filterArray"
+        [filter]="filter"
+      ></app-filtercomponent>
+    </div>
+    <div class="filter-container__clear">Clear</div>
+  </div>
   <app-joblisting
     *ngFor="let job of jobs"
     [job]="job"
