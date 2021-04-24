@@ -1,6 +1,10 @@
 <div>
   <app-header></app-header>
-
-  <app-joblisting *ngFor="let job of jobs" [job]="job"> </app-joblisting>
   <app-filtercomponent></app-filtercomponent>
+  <app-joblisting
+    *ngFor="let job of jobs"
+    [job]="job"
+    (jobDetails)="OnclickAdded($event)"
+  >
+  </app-joblisting>
 </div>
